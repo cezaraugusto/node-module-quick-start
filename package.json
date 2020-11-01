@@ -1,0 +1,32 @@
+{
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cezaraugusto/node-module-quick-start.git"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "name": "node-module-quick-start",
+  "version": "0.0.0",
+  "description": "Template for new Node modules",
+  "main": "module.js",
+  "author": {
+    "name": "Cezar Augusto",
+    "email": "boss@cezaraugusto.net",
+    "url": "https://cezaraugusto.net"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "files": [
+    "module.js"
+  ],
+  "keywords": [
+    "template",
+    "node-module"
+  ],
+  "devDependencies": {
+    "jest": "^26.6.1"
+  }
+}
