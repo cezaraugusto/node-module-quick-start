@@ -2,8 +2,10 @@
 [action-url]: https://github.com/cezaraugusto/node-module-quick-start/actions
 [npm-image]: https://img.shields.io/npm/v/node-module-quick-start.svg
 [npm-url]: https://npmjs.org/package/node-module-quick-start
+[downloads-image]: https://img.shields.io/npm/dm/node-module-quick-start?color=2ecc40
+[downloads-url]: https://npmjs.org/package/node-module-quick-start
 
-# node-module-quick-start [![workflow][action-image]][action-url] [![npm][npm-image]][npm-url]
+# node-module-quick-start [![workflow][action-image]][action-url] [![npm][npm-image]][npm-url] [![downloads][downloads-image]][downloads-url]
 
 > Template for creating new `node_modules`
 
