@@ -5,32 +5,73 @@
     "url": "https://github.com/cezaraugusto/node-module-quick-start.git"
   },
   "engines": {
-    "node": ">=10"
+    "node": ">=16"
   },
+  "engineStrict": false,
   "name": "node-module-quick-start",
   "version": "0.0.0",
   "description": "Template for new Node modules",
-  "main": "module.js",
+  "homepage": "https://www.npmjs.com/package/node-module-quick-start",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
   "author": {
     "name": "Cezar Augusto",
     "email": "boss@cezaraugusto.net",
     "url": "https://cezaraugusto.net"
   },
   "scripts": {
-    "test": "jest",
+    "build": "rslib build",
+    "dev": "rslib build --watch",
+    "pretest": "npm run build",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
   "files": [
-    "module.js"
+    "dist"
   ],
   "keywords": [
     "template",
-    "node-module"
+    "node-module",
+    "rslib",
+    "vitest",
+    "typescript"
   ],
   "devDependencies": {
+    "@rslib/core": "^0.23.0",
+    "@types/node": "^25.9.3",
     "eslint": "^10.5.0",
-    "eslint-config-auditor": "^2.0.0",
-    "jest": "^26.6.1"
-  }
+    "eslint-config-auditor": "^2.3.1",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.9"
+  },
+  "publishConfig": {
+    "provenance": true
+  },
+  "packageManager": "pnpm@9.9.0+sha512.60c18acd138bff695d339be6ad13f7e936eea6745660d4cc4a776d5247c540d0edee1a563695c183a66eb917ef88f2b4feb1fc25f32a7adcadc7aaf3438e99c1",
+  "pnpm": {
+    "overrides": {
+      "vite": ">=7.3.5",
+      "vitest": ">=3.2.6",
+      "rollup": ">=4.59.0",
+      "minimatch": ">=9.0.7",
+      "picomatch": ">=4.0.4",
+      "postcss": ">=8.5.10",
+      "js-yaml": ">=4.2.0",
+      "brace-expansion": ">=2.0.2",
+      "tmp": ">=0.2.6",
+      "esbuild": ">=0.25.0"
+    }
+  },
+  "bugs": "https://github.com/cezaraugusto/node-module-quick-start/issues",
+  "sideEffects": false
 }

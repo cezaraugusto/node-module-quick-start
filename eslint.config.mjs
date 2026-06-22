@@ -1,13 +1,13 @@
-import auditor from 'eslint-config-auditor'
+import ts from 'eslint-config-auditor/ts'
 import stylistic from 'eslint-config-auditor/stylistic'
-import jest from 'eslint-config-auditor/jest'
+import vitest from 'eslint-config-auditor/vitest'
 
 export default [
   {ignores: ['dist/**', 'build/**', 'out/**', 'coverage/**', '**/__fixtures__/**', '**/fixtures/**', '**/__mocks__/**', '**/__snapshots__/**', '**/*.min.js', '**/vendor/**', '**/*.json', 'eslint.config.mjs']},
-  ...auditor,
+  ...ts,
   ...stylistic,
-  ...jest.map((c) => ({
+  ...vitest.map((c) => ({
     ...c,
     files: ['**/*.test.{js,jsx,ts,tsx}', '**/*.spec.{js,jsx,ts,tsx}']
-  }))
+  })),
 ]
